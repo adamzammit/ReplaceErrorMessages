@@ -1,4 +1,4 @@
-# LimeSurvey ReplaceErrorMessages plugn
+# LimeSurvey ReplaceErrorMessages plugin
 LimeSurvey plugin for replacing the built in error messages
 
 ## Requirements
