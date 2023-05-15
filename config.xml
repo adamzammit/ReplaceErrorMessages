@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <metadata>
+        <name>ReplaceErrorMessages</name>
+        <type>plugin</type>
+        <creationDate>2023-05-12</creationDate>
+        <last_update>2023-05-15</last_update>
+        <author>Adam Zammit</author>
+        <authorUrl>https://github.com/adamzammit/ReplaceErrorMessages</authorUrl>
+        <version>1.0.0</version>
+        <license>GPL 3.0</license>
+        <description><![CDATA[Replace the default LimeSurvey error messages that occur due to the survey expired, session expired, already completed, etc]]></description>
+    </metadata>
+
+    <compatibility>
+        <version>3.0</version>
+    </compatibility>
+
+    <updaters disabled="disabled">
+    </updaters>
+</config>
