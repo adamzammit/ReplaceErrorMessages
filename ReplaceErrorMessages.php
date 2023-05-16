@@ -89,24 +89,8 @@ class ReplaceErrorMessages extends LimeSurvey\PluginManager\PluginBase
     public function init() 
     {
         $this->subscribe('onSurveyDenied', 'actionReplaceErrorMessage');
-        $this->subscribe('newSurveySettings');
         $this->subscribe('beforeSurveySettings');
     }
-
-    /** 
-     * Apply global settings as default at survey level
-     *
-     * @return none
-     */
-    public function newSurveySettings()
-    {
-        $event = $this->event;
-        foreach ($event->get('settings') as $name => $value) {
-            /* In order use survey setting, if not set, use global, if not set use default */
-            $default = $event->get($name, null, null, isset($this->settings[$name]['default']) ? $this->settings[$name]['default'] : null);
-            $this->set($name, $value, 'Survey', $event->get('survey'), $default);
-        }
-    }  
 
     /**
      * This event is fired by the administration panel to gather extra settings
@@ -201,7 +185,7 @@ class ReplaceErrorMessages extends LimeSurvey\PluginManager\PluginBase
     private function _getls($setting, $surveyId) 
     {
         $return =  $this->get($setting, 'survey', $surveyId);
-        if ($return === "") {
+        if (empty($return)) {
             $return = $this->get($setting);
         }
         return $return;
