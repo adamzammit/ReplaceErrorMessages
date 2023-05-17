@@ -90,6 +90,20 @@ class ReplaceErrorMessages extends LimeSurvey\PluginManager\PluginBase
     {
         $this->subscribe('onSurveyDenied', 'actionReplaceErrorMessage');
         $this->subscribe('beforeSurveySettings');
+        $this->subscribe('newSurveySettings');
+    }
+
+    /**
+     * Required to generate settings at the survey level
+     *
+     * @return none
+     */
+    public function newSurveySettings()
+    {
+        $event = $this->event;
+        foreach ($event->get('settings') as $name => $value) {
+            $this->set($name, $value, 'Survey', $event->get('survey'));
+        }
     }
 
     /**
