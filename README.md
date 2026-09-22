@@ -2,7 +2,7 @@
 LimeSurvey plugin for replacing the built in error messages
 
 ## Requirements
-- LimeSurvey 3.X, 6.X, and 7.X
+- LimeSurvey 3.X, 6.X, or 7.X
 
 ## Installation instructions
 - Download the zip from the [releases](https://github.com/adamzammit/ReplaceErrorMessages/releases) page and extract to your plugins folder.
