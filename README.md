@@ -6,6 +6,8 @@ LimeSurvey plugin for replacing the built in error messages
 
 ## Installation instructions
 - Download the zip from the [releases](https://github.com/adamzammit/ReplaceErrorMessages/releases) page and extract to your plugins folder.
+- You can also upload the same zip in *Configuration -> Plugins -> Upload & install*.
+- Do not use GitHub's "Code -> Download ZIP" button. Its top level folder is named after the repository and the branch (for example `ReplaceErrorMessages-main`), but LimeSurvey only accepts a top level folder named exactly `ReplaceErrorMessages`. With any other name the upload stops with "Could not parse config.xml file.", and an update leaves the plugin folder without its `config.xml`.
 
 ## Usage
 - Enable the plugin
